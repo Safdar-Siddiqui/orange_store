@@ -13,20 +13,32 @@
 
 <body>
 
+    <!-- <div class="sideMenu">
+        <ul>
+            <li> <a href="#" class="active"> Home </a> </li>
+            <li> <a href="#"> Categories </a> </li>
+            <li> <a href="#"> Blog </a> </li>
+            <li> <a href="#"> About </a></li>
+        </ul>
+    </div> -->
+
+
     <nav>
-        <div class="logo"> <a href="#"> LOGO </a> </div>
+        <div class="logo"> <img src="./images/Orange.png" alt="Logo"></div>
         <div class="menu">
             <ul>
-                <li> <a href="#" class="active"> Home</a> </li>
-                <li> <a href="#"> Shop</a> </li>
-                <li> <a href="#">Blog </a> </li>
+                <li> <a href="#" class="active"> Home </a> </li>
+                <li> <a href="#"> Categories </a> </li>
+                <li> <a href="#"> Blog </a> </li>
                 <li> <a href="#"> About </a></li>
             </ul>
+            <!-- <span id="menuImage" > <i class="fa-solid fa-bars" onclick="showMenu()"></i> </span> -->
+
         </div>
 
         <div class="login-menu">
             <ul>
-                <li> <a href="#"> Login</a> </li>
+                <li> <a href="#" onclick="showLogin()"> Login</a> </li>
                 <li> <a href="#" onclick="showCart()"> <i class="fa-solid fa-cart-shopping"></i> </a> <span id="cart-count" onclick="showCart()">0</span> </li>
             </ul>
         </div>
@@ -36,6 +48,41 @@
     <div id="cartOuter">
         <div class="cart">
             <div id="cartTop"> <span onclick="closeCart()"> &times; </span> </div>
+        </div>
+    </div>
+
+    <div id="loginOuter">
+        <div class="loginModal">
+            <div id="loginTop"> <span onclick="closeLogin()"> &times; </span> </div>
+            <div id="loginContents">
+                <form action="">
+                    <input type="text" placeholder="Email" id="email">
+                    <input type="password" placeholder="Password" id="password">
+                    <label for="loginCheckbox"> <input type="checkbox" id="loginCheckbox" > Keep me logged in
+                    </label>
+                    <button> Login </button>
+                    <p> Not yet registered? <span id="signupBtn" onclick="showSignup()"> Signup </span> </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="signupOuter">
+        <div class="signupModal">
+            <div id="signupTop"> <span onclick="closeSignup()"> &times; </span> </div>
+            <div id="signupContents">
+                <form action="">
+                    <input type="text" placeholder="First Name" id="fName">
+                    <input type="text" placeholder="Last Name" id="lName">
+                    <input type="text" placeholder="Email" id="email">
+                    <input type="password" placeholder="Password" id="password">
+                    <input type="password" placeholder="Confirm Password" id="confirm-password">
+                    <!-- <label for="loginCheckbox"> <input type="checkbox" id="loginCheckbox" > Keep me logged in -->
+                    <!-- </label> -->
+                    <button> Signup </button>
+                    <p> Already have account? <span id="loginBtn" onclick="showLogin()" > Login </span> </p>
+                </form>
+            </div>
         </div>
     </div>
 

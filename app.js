@@ -2,6 +2,16 @@ let cartCount = document.getElementById("cart-count");
 let cart = document.querySelector(".cart");
 let cartOuter = document.querySelector("#cartOuter");
 
+let loginModal = document.querySelector(".loginModal");
+let loginOuter = document.querySelector("#loginOuter");
+
+let signupModal = document.querySelector(".signupModal");
+let signupOuter = document.querySelector("#signupOuter");
+
+let menuShow = document.querySelector(".menu");
+
+let sideMenu = document.querySelector(".sideMenu");
+
 // let nav = document.querySelector("nav");
 
 // let lastScrollTop = 0;
@@ -48,6 +58,62 @@ function showCart(){
 
 function closeCart(){
     cartOuter.style.display = "none";
+    flag = false;
+
+}
+
+var flag2 = false;
+function showMenu(){
+    if(flag2 === false){
+        sideMenu.style.display = "block";
+        flag2 = true;
+    }
+    else{
+        sideMenu.style.display = "none";
+        flag2= false;
+    }
+}
+
+// function showLogin(){
+//     console.log("Login Button clicked");
+// }
+
+function showLogin(){
+    if(flag== false){
+        loginOuter.style.display = "block";
+        signupOuter.style.display = "none";
+
+
+        // cart.style.display = "block";
+        flag= true;
+    }
+    else{
+        loginOuter.style.display = "none";
+        // cart.style.display = "none";
+        flag= false;
+    }
+}
+
+function closeLogin(){
+    loginOuter.style.display = "none";
+    flag = false;
+
+}
+
+function showSignup(){
+    if(flag== false){
+        signupOuter.style.display = "block";
+        loginOuter.style.display = "none";
+        flag= true;
+    }
+    else{
+        signupOuter.style.display = "none";
+        flag= false;
+    }
+}
+
+function closeSignup(){
+    signupOuter.style.display = "none";
     flag = false;
 
 }
