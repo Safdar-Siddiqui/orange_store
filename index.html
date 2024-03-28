@@ -39,7 +39,7 @@
         <div class="login-menu">
             <ul>
                 <li> <a href="#" onclick="showLogin()"> Login</a> </li>
-                <li> <a href="#" onclick="showCart()"> <i class="fa-solid fa-cart-shopping"></i> </a> <span id="cart-count" onclick="showCart()">0</span> </li>
+                <li> <a href="#" onclick="showCart()"> <i class="fa-solid fa-cart-shopping"></i> </a> <button id="cart-count" onclick="showCart()">0</button> </li>
             </ul>
         </div>
     </nav>
@@ -48,6 +48,32 @@
     <div id="cartOuter">
         <div class="cart">
             <div id="cartTop"> <span onclick="closeCart()"> &times; </span> </div>
+            <div id="cartContents">
+                <div id="cartContentLeft">
+                    <div id="productDesc">
+                        <ul>
+                            <li>
+                                <div id="liImg"> <img src="./images/Orange.png" alt="" width="100px" height="100px"> </div>
+                                <div id="liDetails">
+                                    <div id="productDetails"> <span> Product: <b> Jeans </b> </span> <span> Color: <b> Blue</b> </span> <span> Size: <b> M</b> </span></div>
+                                    <div id="quantity"> <button id="quantityPlusBtn"> - </button> <input type="text" value="1" id="quantityNumber"> <button id="quantityMinusBtn"> +</button> </div>
+                                    <div id="price"> Price </div>
+                                    
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="delbtn"> <span id="dltItemBtn"> &times; </span> </div>
+
+                </div>
+
+
+
+                <div id="cartContentRight"> Dear</div>
+
+            </div>
         </div>
     </div>
 

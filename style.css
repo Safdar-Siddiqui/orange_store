@@ -84,7 +84,7 @@ a {
 
 #cartOuter .cart{
     position: absolute;
-    width: 50%;
+    width: 80%;
     height: 500px;
     background-color: #fff;
     position: fixed;
@@ -116,6 +116,99 @@ a {
     background-color: rgb(220, 144, 3);
     border-radius: 5px;
 }
+
+
+#cartContents{
+    /* background-color: red; */
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+#cartContents #cartContentLeft{
+    /* background-color: blue; */
+    width: 70%;
+    height: 100%;
+    /* border-right: 1px solid gray; */
+    /* margin-right: 20px; */
+    /* padding-inline: 10px; */
+    overflow-y: scroll;
+    display: flex;
+    /* background-color: green; */
+}
+
+#productDesc{
+    flex-grow: 1;    
+}
+
+#delbtn{
+    /* font-size: 48px; */
+    background-color: aqua;
+}
+
+#cartContents #cartContentLeft li{
+    display: flex;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid gray;
+    background: #fff;
+    list-style: none;
+    margin-left: 0px;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 20px;
+}
+
+#liDetails{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#productDetails{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+#quantityNumber{
+    width: 30px;
+    /* margin-inline: 5px; */
+    text-align: center;
+}
+
+#quantityPlusBtn, #quantityMinusBtn{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding-inline: 5px;
+    /* padding-block: 16px; */
+    /* padding-inline: 16px; */
+}
+
+#dltItemBtn{
+    font-size: 26px;
+    color: red;
+    user-select: none;
+    cursor: pointer;
+    padding-inline: 10px;
+    /* padding-block: 0px; */
+}
+
+#dltItemBtn:hover, #quantityPlusBtn:hover, #quantityMinusBtn:hover{
+    background-color: rgba(255, 166, 0, 0.5);
+    color: #000;
+    border-radius: 7px;
+}
+
+#cartContents #cartContentRight{
+    border-left: 1px solid gray;
+}
+
+
+
 
 #loginOuter, #signupOuter{
     display: none;
@@ -305,13 +398,18 @@ a {
     text-align: center;
     position: relative;
     left: -22px;
+    /* bottom: 15px; */
     background-color: red;
-    width: fit-content;
-    padding: 3px 5px;
-    height: fit-content;
+    /* padding: 3px 5px; */
+    /* height: fit-content; */
     border-radius: 50%;
     color: #fff;
     cursor: pointer;
+    width: 18px;
+    /* padding: 4px 6px; */
+    border: none;
+    outline: none;
+    height: 18px;
 }
 
 
@@ -385,5 +483,19 @@ nav .menu #menuImage{
         padding: 7px 5px;
         justify-content: space-between;
     }
+
+    #cartContents #cartContentLeft li{
+        flex-direction: column;
+        padding-block: 10px;
+    }
+
+    #liDetails{
+        flex-direction: column;
+    }
+
+    #quantity{
+        margin-block: 15px;
+    }
+
 
 }
